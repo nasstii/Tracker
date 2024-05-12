@@ -1,0 +1,116 @@
+
+<!DOCTYPE html> 
+<html> 
+
+{% extends 'base.html' %}
+{% block body %}
+<head> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.5.0/sql.js"></script>
+  <title>Календарь привычек</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="https://db.onlinewebfonts.com/c/869ee3f760a416f2dadc427a61de209e?family=HSE+Sans"> 
+ 
+</head> 
+<body> 
+  <div class="page-header"> 
+    <h1>Трекер привычек</h1> 
+  </div> 
+  <div class="calendar-container"> 
+    <div class="calendar-header"> 
+      <button class="prev-month">&lt;</button> 
+      <span class="month-year"></span> 
+      <button class="next-month">&gt;</button> 
+    </div> 
+    <div class="calendar-body"> 
+       
+ 
+ 
+ 
+      <div class="calendar-days-of-week"> 
+        <span>Пн</span> 
+        <span>Вт</span> 
+        <span>Ср</span> 
+        <span>Чт</span> 
+        <span>Пт</span> 
+        <span>Сб</span> 
+        <span>Вс</span> 
+      </div> 
+      <div class="calendar-days"></div> 
+    </div> 
+
+
+    <div class="selected-days-count">Выполнено: 0 </div> 
+    
+    
+    <div class="habit-button-container"> 
+      <input type="text" class="habit-button" placeholder="Выберите привычку" readonly> 
+      <button class="habit-button-toggle">&#9776;</button> 
+    </div> 
+    
+    
+    <form id="habit-form">
+      <input type="text" name="habit" placeholder="Добавить привычку">
+      <input type="submit" value="Сохранить">
+    </form>
+  
+    
+  
+    <!-- Контейнер для списка привычек -->
+    <ul class="habit-list"></ul>
+
+
+  
+  </div> 
+ 
+</a> 
+<a href="calendar.html"> 
+<img class="image1" src="./assets/white_circle_placeholder.png" alt="alt text" /> 
+  
+</a>   
+ <a href="add.html"> 
+<img class="image11"src="./assets/white_circle_placeholder.png" alt="alt text" /> 
+</a>  
+ 
+<a href="calendar.html"> 
+<img class="image4" src="./assets/settings_gear_outline.png" alt="alt text" /> 
+</a>  
+ 
+<a href="add.html"> 
+<img class="image5" src="./assets/black_square.png" alt="alt text" /> 
+</a>  
+<a href="index.html"> 
+<img class="image2" src="./assets/dark_blue_circle.png" alt="alt text" /> 
+</a> 
+ 
+<a href="index.html"> 
+<img class="image3" src="./assets/icon_water_glass.png" alt="alt text" /> 
+</a> 
+ 
+  <div class="root"> 
+    <h1 class="title">HSE Scheduler</h1> 
+    <img class="image" src="./assets/blue_university_logo.png" alt="alt text" /> 
+        <img class="image2" src="./assets/dark_blue_circle.png" alt="alt text" /> 
+        <img class="image3" src="./assets/icon_water_glass.png" alt="alt text" /> 
+         
+         
+         
+         
+  </div>  
+   <div class="image-container"> 
+    <img id="image100"> 
+    <p id="caption"></p> 
+   </div> 
+   
+   <div class="rect2"></div> 
+ 
+   <a href="account.html"> 
+    <img class="image111" src="./assets/black_background.png" alt="alt text" /> 
+ 
+  <script src="script.js"></script> 
+
+ 
+</body> 
+
+{% endblock body %}
+</html>
+
