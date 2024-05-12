@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="static/styles/account.css">
+    <link href="https://db.onlinewebfonts.com/c/869ee3f760a416f2dadc427a61de209e?family=HSE+Sans" rel="stylesheet">
+    <style type="text/css">
+        A {
+    color: #0F2D69; /* Цвет ссылок */
+   }
+   A:visited {
+    color: #0F2D69; /* Цвет посещенных ссылок */
+   }
+   A:hover { 
+    text-decoration: underline; /* Добавляем подчеркивание при наведении курсора на ссылку */
+    color: #FFFFFF; /* Ссылка красного цвета */
+   }
+       </style>
+</head>
+<body>
+    <div class="main">
+        <div class = "top-block">
+            <div class = "logo">
+                <img src="static/images/logo2.svg" alt="">
+            </div>
+            <div class = "close-icon">
+                <a href="{{ url_for('calendar') }}"><img src="static/images/кнопка.svg" alt="Выход"></a>
+            </div>
+        </div>
+        <div class = "bottom-block">
+            <div class="big">
+                <div>
+                    <h1>Личный кабинет</h1>
+                </div>
+                <input class="name" type="text" placeholder="Имя пользователя" value="{{ username|default('') }}">
+                <form method="GET" action="{{ url_for('rewrite_password') }}">
+                    <div class="button-mini">
+                        <button type="submit" class="change">Сменить пароль</button>
+                    </div>
+                </form>
+                <form method="GET" action="{{ url_for('logout') }}">
+                    <div class="button-mini">
+                        <button type="submit" class="change">Выйти</button>
+                    </div>
+                </form>
+                <div class="link">
+                    <a class="lgn-link" href="mailto:hse.scheduler@yandex.ru" >Служба поддержки</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
